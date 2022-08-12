@@ -13,7 +13,7 @@ plot(x,y2,"--r","LineWidth",2)  % "--r" corresponds to dashed red line; width of
 
 xlabel("x")          % add axis label
 ylabel("y")          % add axis label
-axis([0 4*pi, -1 1]) % set coordinate range
+axis([0 4*pi -1 1]) % set coordinate range
 
 title("Plot of sin and cosine functions", "FontSize", 12)
 legend("sin(x)","cos(x)")

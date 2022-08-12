@@ -3,8 +3,10 @@
 clear             % Clear workspace
 clc               % Clear command log
 
+% Vector for x coordinates
 x = linspace(-1,1,201);
 
+% Vectors for y coordinates
 T1 = cos(acos(x));
 T3 = cos(3*acos(x));
 T5 = cos(5*acos(x));
