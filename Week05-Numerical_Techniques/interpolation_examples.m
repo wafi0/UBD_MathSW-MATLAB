@@ -13,4 +13,6 @@ y_spline = interp1(x, y, new_x, 'spline')
 % = 15, 7.8, 0
 
 % See original points and interpolated points (using spline in the same graph)
-plot(x, y, new_x, y_spline, '-o')
+interp_plot = figure();
+plot(x, y, new_x, y_spline, '-o');
+legend('Original points', 'Interpolated points');

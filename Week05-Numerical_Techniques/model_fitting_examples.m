@@ -1,3 +1,4 @@
+clc; clear;
 % Given the following model
 height = [0, 1.7, 1.95, 2.6, 2.92, 4.04, 5.24];
 flow = [0, 2.6, 3.6, 4.03, 6.45, 11.22, 30.61];
@@ -17,8 +18,8 @@ new_line_flow = polyval(line_model, new_height);
 new_quad_flow = polyval(quad_model, new_height);
 new_cube_flow = polyval(cube_model, new_height);
 
-% Plot the oridinal data together with the models found for comparison
-figure();
+% Plot the original data together with the models found for comparison
+model_fitting = figure();
 plot(
   height, flow, 'bo',
   new_height, new_line_flow,
@@ -29,5 +30,3 @@ title('Model fitting');
 xlabel('height');
 ylabel('flow');
 legend('real data', 'linear model', 'quadratic model', 'cubic model');
-
-
