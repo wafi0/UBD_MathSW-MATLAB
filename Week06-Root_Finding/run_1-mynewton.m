@@ -1,6 +1,8 @@
 ## Author: Wafi <Wafi@DESKTOP-GN3SUD0>
 ## Created: 2022-09-08
 
+clear;
+
 format long;
 format compact;
 
@@ -27,7 +29,7 @@ x2 = mynewton(f, f1, 0.1, 10)
 x2_more_iterations = mynewton(f, f1, 0.1, 20)
 x2_even_more_iterations = mynewton(f, f1, 0.1, 50) % Approaches 0
 
-fprintf('\nUsing mynewton, w/ warning on not reaching tolerance \n\n');
+fprintf('\nUsing mynewton, w/ warning on not reaching tolerance treshold\n\n');
 
 f = @(x) x^3 - 5;
 f1 = @(x) 3*x^2;
@@ -36,7 +38,7 @@ x1t1 = mynewton_wtol(f, f1, 2, 3, tol)   % Fine
 tol = 1e-10
 x1t2 = mynewton_wtol(f, f1, 2, 3, tol)  % Get warning
 
-fprintf('\nUsing mynewton, w/ iterate until tolerance reached \n\n');
+fprintf('\nUsing mynewton, w/ iterate until tolerance treshold reached \n\n');
 
 tol = 1e-10
 x1u = mynewton_utol(f, f1, 2, tol)
